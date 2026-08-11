@@ -21,7 +21,7 @@ import time
 from pathlib import Path
 from typing import Any
 
-__version__ = "0.5.0"
+__version__ = "0.6.0"
 
 REVIEWERS: dict[str, dict[str, Any]] = {
     "codex": {
