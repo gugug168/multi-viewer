@@ -1,4 +1,22 @@
-# Multi Viewer
+<p align="center">
+  <img src="./assets/readme/hero.svg" width="100%" alt="Multi Viewer：让多个 AI 彼此独立地审同一份计划，而不是投票。">
+</p>
+
+Windows-first 的轻量命令行工具：将同一计划交给多个 CLI 独立审查，并保留共识、分歧和降级结果供人决策。
+
+## 一眼看懂
+
+| 价值 | 真实证据 |
+| --- | --- |
+| 让多个 AI 彼此独立地审同一份计划，而不是投票。 | 并排共识 · 独有视角 · 失败可见 |
+
+## 从这里开始
+
+```text
+python .\multi_viewer.py --help
+```
+
+## 完整说明
 
 让多个 AI **独立**审同一份计划或方案的轻量命令行工具。
 
