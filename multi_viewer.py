@@ -30,7 +30,8 @@ REVIEWERS: dict[str, dict[str, Any]] = {
         "timeout": 900,
         "mode": "stdin",
     },
-    "gemini": {"cmd": "gemini", "args": ["-m", "gemini-2.5-pro", "-p"], "timeout": 600},
+    "gemini": {"cmd": "agy", "args": ["--model", "gemini-3.1-pro-high", "--print"], "timeout": 600},
+    "antigravity": {"cmd": "agy", "args": ["--model", "gemini-3.1-pro-high", "--print"], "timeout": 600},
     "cc": {"cmd": "claude", "args": ["-p"], "timeout": 900},
     "grok": {"cmd": "grok", "args": ["-p"], "timeout": 900},
 }
@@ -233,7 +234,7 @@ def build_parser() -> argparse.ArgumentParser:
         description="多 AI 独立审查：不投票，保留共识、独有观点、失败和未完成方。"
     )
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
-    parser.add_argument("--reviewers", default="codex,gemini", help="逗号分隔：codex,gemini,cc,grok")
+    parser.add_argument("--reviewers", default="codex,antigravity", help="逗号分隔：codex,gemini/antigravity,cc,grok")
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--prompt-file", help="UTF-8 审查 prompt 文件路径")
     source.add_argument("--prompt", help="审查 prompt 文本")
